@@ -1,0 +1,10 @@
+package day2;
+public class logical{
+	public static void main(String[] args)
+	{
+		int num=4;
+		int num2=2;
+		System.out.println(num==4 || num2==8);
+	}
+}
+   
