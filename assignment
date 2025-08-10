@@ -1,0 +1,10 @@
+package day2;
+public class asssignmentOPERATOR{
+	public static void main(String[] args)
+	{
+		int num=220;
+		num%=100;
+		System.out.println(num);
+	}
+}
+   
