@@ -1,0 +1,20 @@
+package day2assessments;
+import java.util.Scanner;
+public class four{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String belt1 = scanner.nextLine().trim().toLowerCase();
+        String belt2 = scanner.nextLine().trim().toLowerCase();
+        String belt3 = scanner.nextLine().trim().toLowerCase();
+        if (!isValidInput(belt1) || !isValidInput(belt2) || !isValidInput(belt3)) {
+            System.out.println("Invalid Input");
+        } else if (belt1.equals("engaged") && belt2.equals("engaged") && belt3.equals("engaged")) {
+            System.out.println("Initiating Warp Drive!");
+        } else {
+            System.out.println("Hold On! Some Belts are Adrift.");
+        }
+    }
+    private static boolean isValidInput(String input) {
+        return input.equals("engaged") || input.equals("disengaged");
+    }
+}
