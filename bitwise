@@ -1,0 +1,12 @@
+package day2;
+public class bitwiseOPERATOR{
+	public static void main(String[] args)
+	{
+		int num=27;
+		int num2=32;
+		System.out.println(num & num2);
+		System.out.println(num ^ num2);
+		System.out.println(num | num2);
+	}
+}
+    
