@@ -1,0 +1,24 @@
+package day2assessments;
+import java.util.Scanner;
+public class five{
+    public static void main(String[] args) {
+        Scanner scanner= new Scanner(System.in);
+        float frontLeft = scanner.nextFloat();
+        float rearLeft = scanner.nextFloat();
+        float rearRight = scanner.nextFloat();
+        float frontRight = scanner.nextFloat();
+        System.out.println("Front-left : " + checkPressure(frontLeft));
+        System.out.println("Rear-left : " + checkPressure(rearLeft));
+        System.out.println("Rear-right : " + checkPressure(rearRight));
+        System.out.println("Front-right : " + checkPressure(frontRight));
+    }
+    private static String checkPressure(float pressure) {
+        if (pressure < 33) {
+            return "Inflate";
+        } else if (pressure > 33) {
+            return "Deflate";
+        } else {
+            return "Untouched";
+        }
+    }
+}
