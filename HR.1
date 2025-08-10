@@ -1,0 +1,12 @@
+package day2assessments;
+import java.util.Scanner;
+public class one{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int totalStudents = scanner.nextInt();
+        int numberOfGroups = scanner.nextInt();
+        int studentsPerGroup = totalStudents / numberOfGroups;
+        int remainingStudents = totalStudents % numberOfGroups;
+        System.out.println("The number of students in each team is " + studentsPerGroup + " and left out is " + remainingStudents);
+    }
+}
