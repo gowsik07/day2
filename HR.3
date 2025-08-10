@@ -1,0 +1,31 @@
+package day2assessments;
+import java.io.*;
+import java.util.*;
+public class three{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+        int y = scanner.nextInt();
+        double ti = scanner.nextDouble();
+        double tj = scanner.nextDouble();
+        if (x <= 0 || y <= 0 || x >= 32767 || y >= 32767 || tj >= ti) {
+            System.out.println("Invalid Input");
+            return;
+        }
+        int tiHours = (int) ti;
+        int tiMinutes = (int) Math.round((ti - tiHours) * 100);
+        int tjHours = (int) tj;
+        int tjMinutes = (int) Math.round((tj - tjHours) * 100);
+        if (tiMinutes >= 60 || tjMinutes >= 60) {
+            System.out.println("Invalid Input");
+            return;
+        }
+        int totalMinutesAvailable = (tiHours * 60 + tiMinutes) - (tjHours * 60 + tjMinutes);
+        double timeRequiredInMinutes = ((double) x / y) * 60;
+        if (timeRequiredInMinutes <= totalMinutesAvailable) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
